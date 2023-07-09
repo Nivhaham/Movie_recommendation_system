@@ -1,6 +1,8 @@
+"""
+Run This script when you want to expend your DB
+"""
+
 # OMDB - open movie database
-import json
-import requests
 import os
 import useful_functions
 

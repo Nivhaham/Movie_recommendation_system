@@ -1,3 +1,8 @@
+"""
+Main calling this python file in order to
+get the user movies preference.
+"""
+
 import json
 import os
 import tkinter as tk
@@ -33,6 +38,10 @@ def get_data_from_user():
     data["Writer"] = submit_writer()
     data["Actors"] = submit_actors()
     print(data)
+    # create a file saving the user data
+    filename = os.path.dirname(os.getcwd()) + "\\User_pref.jsonl"
+    with open(filename, 'w') as file:
+        file.write(json.dumps(data))
     return data
 
 
@@ -138,10 +147,4 @@ button_save = tk.Button(root, text="Save", command=get_data_from_user, width=10,
 button_save.pack(side="bottom", anchor="se")
 
 root.mainloop()
-print(data)
 
-# create a file saving the user data
-filename = os.path.dirname(os.getcwd()) + "\\User_pref.jsonl"
-
-with open(filename, 'w') as file:
-    file.write(json.dumps(data))

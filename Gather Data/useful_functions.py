@@ -1,7 +1,9 @@
 """
 Gather Data assistant
 
-Some function that are used 
+Some function that are used
+to connect to the api, get the data,
+write the data to a file as jsonl.
 """
 
 import json
@@ -11,6 +13,12 @@ import os
 
 
 def write_json_line_by_line(filename, data):
+    """
+
+    :param filename: The filename that is written to.
+    :param data:The written data
+    :return: Void
+    """
     with open(filename, "w") as my_data:
         for item in data:
             my_data.write(json.dumps(item))
@@ -18,6 +26,13 @@ def write_json_line_by_line(filename, data):
 
 
 def append_movies_to_db(filename, data):
+    """
+    appending current data with previous data
+
+    :param filename: The filename that is written to.
+    :param data:The written data
+    :return: Void
+    """
     print(os.path.dirname(filename))
     # print(filename)
     try:
@@ -41,6 +56,10 @@ def append_movies_to_db(filename, data):
 
 
 def get_random_300_movies(api_key):
+    """
+    :param api_key: The api key
+    :return: A list of all gathered data
+    """
     THREE_HUNDRED = 300
     data = []
     for i in range(THREE_HUNDRED):
