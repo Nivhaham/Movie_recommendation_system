@@ -4,9 +4,7 @@ Run This script when you want to expend your DB
 
 # OMDB - open movie database
 import os
-import useful_functions
-
-
+from Gather_Data import useful_functions
 
 def data_gather():
     """
@@ -27,4 +25,4 @@ def data_gather():
     data = useful_functions.get_random_300_movies(my_api_key)
     useful_functions.append_movies_to_db(filename, data)
 
-data_gather()
+#data_gather()

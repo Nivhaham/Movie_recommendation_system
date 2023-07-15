@@ -6,7 +6,7 @@ get the user movies preference.
 import json
 import os
 import tkinter as tk
-
+import time
 data = {}
 
 
@@ -48,6 +48,8 @@ def get_data_from_user():
 def exit_program():
     root.destroy()
 
+print("Add Your Movie preferences data")
+time.sleep(3)
 
 movie_options = {
     "Very Old": False,

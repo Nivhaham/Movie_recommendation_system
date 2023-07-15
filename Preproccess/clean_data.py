@@ -18,7 +18,7 @@ def clean_data(filename=os.path.dirname(os.getcwd()) + "\\Movies_data.jsonl"):
     :return: removing bad rows from dataset
     """
     # filename = os.path.dirname(os.getcwd()) + "\\Movies_data.jsonl"
-    filename_checks = os.path.dirname(os.getcwd()) + "\\Gather Data\\Movies_data.json"
+    filename_checks = os.path.dirname(os.getcwd()) + "\\Gather_Data\\Movies_data.json"
     relevant_cols = ["Title", "Year", "Released", "Genre", "Writer", "Actors", "Runtime", "imdbRating", "imdbID"]
 
     print(filename_checks)
@@ -37,6 +37,8 @@ def clean_data(filename=os.path.dirname(os.getcwd()) + "\\Movies_data.jsonl"):
 
     df.to_json(filename, orient='records', lines=True)
 
-filename = os.path.dirname(os.getcwd()) + "\\Movies_data.jsonl"
-# you can pick the relative path of your database.
-clean_data(filename)
+
+# filename = os.path.dirname(os.getcwd()) + "\\Movies_data.jsonl"
+#filename_from_main = os.getcwd() + "\\Movies_data.jsonl"
+
+#clean_data(filename_from_main)

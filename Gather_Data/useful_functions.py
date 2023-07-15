@@ -1,5 +1,5 @@
 """
-Gather Data assistant
+Gather_Data assistant
 
 Some function that are used
 to connect to the api, get the data,
