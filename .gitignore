@@ -1,0 +1,12 @@
+# .gitignore
+
+# Virtual environment
+venv/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# IDE-specific files (PyCharm)
+.idea/
+*.iml
